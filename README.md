@@ -1,33 +1,41 @@
-# Next-Chakra-Template
-This template is provided for anyone who wants a quickly bootstrapped NextJS + Chakra site!
+# Website
 
-## Features
-- sticky, responsive navbar + footer
-- eslint, prettier, simple-import-sort
-- link icons with labels
-- simple login/register page
-- opengraph link previews
-- linting workflow
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## Packages
-- chakra-ui
-- eslint
-    - eslint-config-prettier
-    - eslint-plugin-prettier
-    - eslint-plugin-simple-import-sort
-- formik
-- yup
-- react-icons
-- react-stickynode
+### Installation
 
-## Required Modification
-These files will require your modification to fit your project.
+```
+$ yarn
+```
 
-- _app.jsx: site meta data
-- footerLinks
-- navbar, footer 
-- favicon
-- theming
+### Local Development
 
-## Suggestions
-- import bootstrap or material-ui because chakra's grids are not the best/are not easy to work with
+```
+$ yarn start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```
+$ yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
