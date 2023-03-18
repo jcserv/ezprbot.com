@@ -90,7 +90,7 @@ const config = {
               },
               {
                 label: "Commands",
-                to: "/docs/category/commands",
+                to: "/docs/commands",
               },
             ],
           },
