@@ -1,0 +1,132 @@
+openapi: 3.0.0
+info:
+  description: |
+    ## Overview
+    EZ PR Bot is deployed as various serverless functions, with one service for each integration.
+    Each integration consists of an event listener to handle incoming events from the relevant system,
+    and exposes endpoints for taking action in those systems.
+
+  version: 2.0.0
+  title: EZ PR Bot OpenAPI Spec
+  contact:
+    name: Jarrod Servilla
+    url: https://github.com/jcserv/ez-pr-bot
+  license:
+    name: GPL-3.0
+    url: "https://www.gnu.org/licenses/gpl-3.0.en.html"
+x-tagGroups:
+  - name: api
+    x-displayName: API
+    tags:
+      - slack
+      - github
+  - name: Models
+    tags:
+      - installation_model
+tags:
+  - name: slack
+    x-displayName: Slack
+    description: The Slack service is a set of Lambdas that handle incoming/outgoing communications to and from Slack, implemented using @slack/bolt
+  - name: github
+    x-displayName: Github
+    description: The Github service is a set of Lambdas that handle incoming/outgoing communications to and from Slack, implemented using @slack/bolt
+  - name: installation_model
+    x-displayName: Installation
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Installation" />
+
+paths:
+  /slack/event:
+    parameters:
+    post:
+      tags:
+        - slack
+        - eventListener
+      summary: Event
+      description: |
+        Listens to relevant Slack events. This can only be accessed by Slack, and cannot be called externally.
+      operationId: postSlackEvent
+      responses:
+        "200":
+          description: OK
+        "405":
+          description: Invalid input
+  /slack/install:
+    parameters:
+    get:
+      tags:
+        - slack
+        - oauth
+      summary: Install
+      description: |
+        Allows the user to install EZ PR Bot to their Slack workspace.
+      operationId: getSlackInstall
+      responses:
+        "200":
+          description: OK
+        "405":
+          description: Invalid input
+  /slack/oauth_redirect:
+    parameters:
+    get:
+      tags:
+        - slack
+        - oauth
+      summary: OAuth Redirect
+      description: |
+        Handles OAuth redirection after installing the Slack App.
+      operationId: getSlackOAuthRedirect
+      responses:
+        "200":
+          description: OK
+        "405":
+          description: Invalid input
+  /github/event:
+    parameters:
+    post:
+      tags:
+        - github
+        - eventListener
+      summary: Event
+      description: |
+        Listens to relevant Github events. This can only be accessed by Github, and cannot be called externally.
+      operationId: postGithubEvent
+      responses:
+        "200":
+          description: OK
+        "405":
+          description: Invalid input
+  /github/install:
+    parameters:
+    get:
+      tags:
+        - github
+        - oauth
+      summary: Install
+      description: |
+        Allows the user to authorize the EZ PR Bot Github App.
+      operationId: getGithubInstall
+      responses:
+        "200":
+          description: OK
+        "405":
+          description: Invalid input
+  /github/oauth_redirect:
+    parameters:
+    get:
+      tags:
+        - github
+        - oauth
+      summary: OAuth Redirect
+      description: |
+        Handles OAuth redirection after installing the Github App.
+      operationId: getGithubOAuthRedirect
+      responses:
+        "200":
+          description: OK
+        "405":
+          description: Invalid input
+components:
+  schemas:
+    Installation:
+      $ref: "./schemas/installation.yml#/Installation"
