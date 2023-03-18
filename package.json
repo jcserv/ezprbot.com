@@ -1,7 +1,10 @@
 {
-  "name": "",
-  "version": "0.0.0",
-  "private": true,
+  "name": "ezprbot.com",
+  "version": "0.1.0",
+  "description": "A Slack bot that accelerates your team's PR review process",
+  "repository": "git@github.com:jcserv/ezprbot.com.git",
+  "author": "Jarrod Servilla",
+  "license": "GPL-3.0",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
