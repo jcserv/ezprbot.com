@@ -1,0 +1,11 @@
+Installation:
+  description: A representation of a cat
+  allOf:
+    - type: object
+      properties:
+        id:
+          type: string
+          description: The team/enterprise ID of the Slack Workspace.
+          example: T12345
+      required:
+        - id
