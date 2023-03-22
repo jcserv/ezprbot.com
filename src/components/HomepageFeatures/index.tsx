@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_code_typing.svg').default,
     description: (
       <>
-       EZ PR Bot bridges the gap between Slack and Github, allowing your crucial code 
+       EZ PR Bot bridges the gap between Slack and Github, allowing your crucial 
        review workflows to be done through Slack shortcuts/commands.
       </>
     ),
@@ -24,8 +24,9 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_progress_overview.svg').default,
     description: (
       <>
-        EZ PR Bot surfaces key metrics about code reviews, allowing you to
-        identity areas of improvement for your team.
+        EZ PR Bot empowers teams to ship code faster by providing visibility
+        into the review process, allowing you to identity areas of improvement
+        for your team.
       </>
     ),
   },
@@ -34,7 +35,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_team_collaboration.svg').default,
     description: (
       <>
-        EZ PR Bot empowers developers by providing tools to manage code reviews as a team.
+        EZ PR Bot offers features to view your team's open PRs, send/receive review reminders, and more.
       </>
     ),
   },
