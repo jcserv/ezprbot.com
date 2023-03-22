@@ -73,7 +73,7 @@ const config = {
           { to: "/blog", label: "Blog", position: "right" },
           {
             label: "Add to Slack",
-            to: `https://slack.com/oauth/v2/authorize?scope=app_mentions%3Aread%2Cchannels%3Ajoin%2Cchannels%3Ahistory%2Cchat%3Awrite%2Cchat%3Awrite.public%2Ccommands%2Cemoji%3Aread%2Cim%3Awrite%2Creactions%3Aread%2Creactions%3Awrite%2Cusers%3Aread%2Cusergroups%3Aread%2Cworkflow.steps%3Aexecute&amp;user_scope=&amp;redirect_uri=https%3A%2F%2Fapi.ezprbot.com%2Fslack%2Foauth_redirect&amp;client_id=${process.env.SLACK_CLIENT_ID}`,
+            to: "https://api.ezprbot.com/slack/install",
             position: "right",
             className: "button button--secondary button--md",
           },

@@ -19,7 +19,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             style={{marginRight: "5px"}}
-            href={`https://slack.com/oauth/v2/authorize?scope=app_mentions%3Aread%2Cchannels%3Ajoin%2Cchannels%3Ahistory%2Cchat%3Awrite%2Cchat%3Awrite.public%2Ccommands%2Cemoji%3Aread%2Cim%3Awrite%2Creactions%3Aread%2Creactions%3Awrite%2Cusers%3Aread%2Cusergroups%3Aread%2Cworkflow.steps%3Aexecute&amp;user_scope=&amp;redirect_uri=https%3A%2F%2Fapi.ezprbot.com%2Fslack%2Foauth_redirect&amp;client_id=${process.env.SLACK_CLIENT_ID}`}
+            href="https://api.ezprbot.com/slack/install"
           > 
             <SiSlack style={{marginRight: "5px", marginTop: "5px"}} />
             Add to Slack
