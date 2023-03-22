@@ -56,12 +56,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/logo.png",
       navbar: {
         title: "EZ PR Bot",
         logo: {
           alt: "EZ PR Bot Logo",
-          src: "img/logo.svg",
+          src: "img/logo.png",
         },
         items: [
           {
