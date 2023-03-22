@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+require('dotenv').config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -55,12 +56,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/logo.png",
       navbar: {
         title: "EZ PR Bot",
         logo: {
           alt: "EZ PR Bot Logo",
-          src: "img/logo.svg",
+          src: "img/logo.png",
         },
         items: [
           {
@@ -72,7 +73,7 @@ const config = {
           { to: "/blog", label: "Blog", position: "right" },
           {
             label: "Add to Slack",
-            to: "https://slack.com/oauth/v2/authorize?scope=app_mentions%3Aread%2Cchannels%3Ajoin%2Cchannels%3Ahistory%2Cchat%3Awrite%2Cchat%3Awrite.public%2Ccommands%2Cemoji%3Aread%2Cim%3Awrite%2Creactions%3Aread%2Creactions%3Awrite%2Cusers%3Aread%2Cusergroups%3Aread%2Cworkflow.steps%3Aexecute&amp;user_scope=&amp;redirect_uri=https%3A%2F%2Fapi.ezprbot.com%2Fslack%2Foauth_redirect&amp;client_id=4605520153728.4567294168359",
+            to: `https://slack.com/oauth/v2/authorize?scope=app_mentions%3Aread%2Cchannels%3Ajoin%2Cchannels%3Ahistory%2Cchat%3Awrite%2Cchat%3Awrite.public%2Ccommands%2Cemoji%3Aread%2Cim%3Awrite%2Creactions%3Aread%2Creactions%3Awrite%2Cusers%3Aread%2Cusergroups%3Aread%2Cworkflow.steps%3Aexecute&amp;user_scope=&amp;redirect_uri=https%3A%2F%2Fapi.ezprbot.com%2Fslack%2Foauth_redirect&amp;client_id=${process.env.SLACK_CLIENT_ID}`,
             position: "right",
             className: "button button--secondary button--md",
           },

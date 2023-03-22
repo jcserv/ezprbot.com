@@ -30,7 +30,7 @@ ex. `http://github.com/jcserv/ez-pr-bot/pulls/1`
 
 ### `[estimated review time]`
 
-> `type: string` | **required**
+> `type: string`
 
 How long it should take to review this PR. Should end with minutes ("m", "min", "minutes") or hours ("h", "hrs", "hours")
 
@@ -38,7 +38,7 @@ ex. `15m`, `2hrs`, `"75 minutes"`
 
 ### `[description]`
 
-> `type: string` | **required**
+> `type: string`
 
 A summary of the changes. Should be wrapped with quotes (")
 
@@ -46,7 +46,7 @@ ex. `"Adds the help command allowing users to learn how to use the bot"`
 
 ### `[@role]`
 
-> `type: @string` | **required**
+> `type: @string`
 
 The role to mention, whom should review the PR.
 
@@ -54,7 +54,7 @@ ex. `@ez-pr-devs`
 
 ### `[#team-channel]`
 
-> `type: #string` | **required**
+> `type: #string`
 
 A Slack channel that EZ PR Bot has joined
 

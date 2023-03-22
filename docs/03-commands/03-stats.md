@@ -10,37 +10,29 @@ View interesting stats about PR review requests submitted by yourself or submitt
 
 `/stats`							# View your average statistics as a contributor
 
-`/stats —-channel [#channel]`		# View the average statistics of a channel
+`/stats —-repo [#repo]`		        # View the average statistics of a repo
 
-`/stats —-pr [pr url]`		    # View the average statistics of a pull request
-
-`/stats —-pr [pr ID]`			
-
-`/stats —-aggregate [aggregate]`	# Specify the aggregate functions being applied when calculating statistics
+`/stats —-pr [pr url]`		        # View the average statistics for an individual pull request
 
 ## Options
 
-### `--channel`
+### `--repo`
 
-Used to define scope for the statistics calculation to the provided channel(s)
+Used to define scope for the statistics calculation to the provided repo(s)
 
 ### `--pr`
 
 Used to define scope for the statistics calculation to the provided PR.
 
-### `--aggregate`
-
-Used to determine what aggregate function will be run on the statistics.
-
 ## Arguments
 
-### `[#channel]`
+### `[repo]`
 
-> `type: #string`
+> `type: string`
 
-A valid Slack channel that ez pr bot has submitted PR review requests to
+The repository
 
-ex. `#team-ez-pr-bot`
+ex. `ez-pr-bot`
 
 ### `[pr url]`
 
